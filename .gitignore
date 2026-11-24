@@ -1,0 +1,14 @@
+# Publish approved archives as release assets, not in Git history.
+*.pkl
+*.pickle
+*.pth
+*.pt
+*.zip
+*.tar
+*.tar.gz
+*.mp4
+*.jpg
+*.jpeg
+*.log
+.env
+__pycache__/

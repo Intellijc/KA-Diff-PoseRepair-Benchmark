@@ -1,0 +1,60 @@
+{
+  "data_source": "PoseTrack21",
+  "detector_variants": [
+    "HRNet-W48",
+    "ViTPose-H"
+  ],
+  "video_counts_per_variant": {
+    "train": 534,
+    "validation": 59,
+    "test": 170
+  },
+  "upstream_split": {
+    "train": "train",
+    "validation": "train",
+    "test": "val"
+  },
+  "window": {
+    "length": 32,
+    "stride": 8,
+    "min_track_length": 8
+  },
+  "joints": 17,
+  "controlled_corruption": {
+    "manuscript_tables": [
+      3,
+      5,
+      6
+    ],
+    "split": "test",
+    "synthetic_occlusion_eval": true,
+    "paired_mask_plan": true,
+    "mask_ratio": 0.3,
+    "mask_dur_min": 5,
+    "mask_dur_max": 15,
+    "mask_mode_probability": {
+      "joint": 0.4,
+      "limb": 0.4,
+      "soft": 0.2
+    },
+    "test_corruption_seeds": [
+      42,
+      7,
+      19,
+      33,
+      67,
+      88
+    ],
+    "local_score_mask": "synthetic_mask * valid_gt_mask"
+  },
+  "natural_errors": {
+    "manuscript_tables": [
+      4
+    ],
+    "split": "test",
+    "mask_ratio": 0,
+    "synthetic_occlusion_eval": false,
+    "repair_threshold": 0.5,
+    "local_score_mask": "annotation-assisted hard repair mask * valid_gt_mask"
+  }
+}

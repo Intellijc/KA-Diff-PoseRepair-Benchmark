@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use these protocols, please cite the KA-Diff manuscript and the upstream PoseTrack papers listed in the README."
+type: dataset
+title: "KA-Diff PoseTrack21-Derived Pose-Repair Benchmarks"
+authors:
+  - family-names: Li
+    given-names: Jiacheng
+  - family-names: Yang
+    given-names: Xiaoxian
+  - family-names: Wang
+    given-names: Deli
+  - family-names: Guo
+    given-names: Chenfei
